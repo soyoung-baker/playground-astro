@@ -1,6 +1,7 @@
 :root {
   --primary-color: #fc6736;
   --secondary-color: #ffb0b0;
+  --light-color: #fff;
 
   --primary-text-color: #efecec;
 
@@ -85,8 +86,28 @@ header {
   display: block;
 }
 
+/* footer 스타일 */
+footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  padding: 0.5rem 1rem;
+  color: var(--primary-text-color);
+  border: 1px solid var(--light-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--background-color);
+  background-color: var(--light-color);
+}
+
 @media screen and (min-width: 636px) {
   .nav-links {
+    position: relative;
     display: block;
     background: none;
   }
