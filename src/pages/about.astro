@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = 'About Me'
 
 const identity = {
@@ -9,9 +11,6 @@ const identity = {
 }
 
 const skills = ['HTML', 'CSS', 'JavaScript']
-
-const skillColor = 'navy'
-const fontWeight = '2rem'
 ---
 
 <html lang="ko">
@@ -21,16 +20,6 @@ const fontWeight = '2rem'
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style define:vars={{ skillColor, fontWeight }}>
-      h1 {
-        color: red;
-        font-size: var(--fontWeight);
-      }
-
-      .skill {
-        color: var(--skillColor);
-      }
-    </style>
   </head>
   <body>
     <h1></h1>

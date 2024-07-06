@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c2d57;
+  font-family: sans-serif;
+  color: #efecec;
+}
+
+h1 {
+  color: #fc6736;
+  font-size: 2.5rem;
+}
+
+a {
+  color: #ffb0b0;
+}
