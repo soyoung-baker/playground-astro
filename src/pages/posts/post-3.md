@@ -1,12 +1,12 @@
 ---
-title: "블로그 포스트 3"
+title: '블로그 포스트 3'
 pubDate: 2022-07-01
-description: "블로그 포스트 3 설명"
-author: "Astro Learner"
+description: '블로그 포스트 3 설명'
+author: 'Astro Learner'
 image:
-url: "https://docs.astro.build/assets/rose.webp"
-alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public"]
+url: 'https://docs.astro.build/assets/rose.webp'
+alt: 'The Astro logo on a dark background with a pink glow.'
+tags: ['astro', 'blogging', 'learning in public']
 ---
 
 # My First Blog Post
