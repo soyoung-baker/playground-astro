@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #fc6736;
+  --secondary-color: #ffb0b0;
+
+  --primary-text-color: #efecec;
+
+  --background-color: #0c2d57;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,16 +15,54 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #0c2d57;
+  background-color: var(--background-color);
   font-family: sans-serif;
-  color: #efecec;
+  color: var(--primary-text-color);
 }
 
 h1 {
-  color: #fc6736;
+  color: var(--primary-color);
   font-size: 2.5rem;
 }
 
 a {
-  color: #ffb0b0;
+  color: var(--primary-text-color);
+}
+
+.nav-links {
+  width: 100%;
+  background-color: var(--primary-color);
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    display: block;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--primary-color);
+  }
 }
