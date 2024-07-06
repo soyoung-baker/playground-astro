@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <p>작성일: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <p><em>{frontmatter.desciption}</em></p>
+  <p>작성자: {frontmatter.author}</p>
+  <slot />
+</BaseLayout>
