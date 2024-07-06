@@ -9,6 +9,9 @@ const identity = {
 }
 
 const skills = ['HTML', 'CSS', 'JavaScript']
+
+const skillColor = 'navy'
+const fontWeight = '2rem'
 ---
 
 <html lang="ko">
@@ -18,6 +21,16 @@ const skills = ['HTML', 'CSS', 'JavaScript']
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style define:vars={{ skillColor, fontWeight }}>
+      h1 {
+        color: red;
+        font-size: var(--fontWeight);
+      }
+
+      .skill {
+        color: var(--skillColor);
+      }
+    </style>
   </head>
   <body>
     <h1></h1>
@@ -35,7 +48,7 @@ const skills = ['HTML', 'CSS', 'JavaScript']
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
   </body>
 </html>
