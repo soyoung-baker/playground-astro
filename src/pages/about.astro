@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
 
 const pageTitle = 'About Me'
 
@@ -23,9 +24,7 @@ const skills = ['HTML', 'CSS', 'JavaScript']
   </head>
   <body>
     <h1></h1>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
 
     <h1>{pageTitle}</h1>
     <p>Here are a few facts about me:</p>
