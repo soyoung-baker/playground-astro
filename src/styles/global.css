@@ -21,15 +21,51 @@ body {
 }
 
 h1 {
-  color: var(--primary-color);
+  color: var(--primary-text-color);
   font-size: 2.5rem;
 }
 
 a {
   color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+/* header 스타일 */
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 56px;
+}
+
+.logo {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  width: 40px;
+  height: 36px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger .line {
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin-bottom: 8px;
+  background-color: var(--secondary-color);
 }
 
 .nav-links {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: var(--primary-color);
   display: none;
@@ -40,14 +76,13 @@ a {
   display: block;
   text-align: center;
   padding: 10px 0;
-  text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.expanded {
-  display: unset;
+.nav-links.expanded {
+  display: block;
 }
 
 @media screen and (min-width: 636px) {
@@ -64,5 +99,9 @@ a {
   .nav-links a:hover,
   .nav-links a:focus {
     color: var(--primary-color);
+  }
+
+  .hamburger {
+    display: none;
   }
 }

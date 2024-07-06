@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css'
-import Navigation from '../components/Navigation.astro'
+import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 const pageTitle = 'About Me'
@@ -24,11 +24,9 @@ const skills = ['HTML', 'CSS', 'JavaScript']
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Navigation />
-
+    <Header />
     <h1>{pageTitle}</h1>
     <p>Here are a few facts about me:</p>
-
     <ul>
       <li>My name is {identity.firstName}</li>
       <li>I live in {identity.country}</li>
@@ -38,7 +36,9 @@ const skills = ['HTML', 'CSS', 'JavaScript']
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-
     <Footer />
+    <script>
+      import '../scripts/menu.js'
+    </script>
   </body>
 </html>
