@@ -8,5 +8,14 @@ const { frontmatter } = Astro.props
   <p>작성일: {frontmatter.pubDate.toString().slice(0, 10)}</p>
   <p><em>{frontmatter.desciption}</em></p>
   <p>작성자: {frontmatter.author}</p>
+  <div class="tags">
+    {
+      frontmatter.tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>{' '}
+        </p>
+      ))
+    }
+  </div>
   <slot />
 </BaseLayout>
